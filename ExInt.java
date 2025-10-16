@@ -11,7 +11,7 @@ public class ExInt {
     double orangePrice = 6.5;
     double discount = 0.95;
 
-    double finalAmount = ((appleCount * applePrice) + (orangeCount * orangePrice)) * discount;
+    double finalAmount = (appleCount * applePrice + orangeCount * orangePrice) * discount;
     System.out.println(finalAmount);
 
   }
