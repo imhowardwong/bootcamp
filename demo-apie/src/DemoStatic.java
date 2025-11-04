@@ -5,6 +5,12 @@ public class DemoStatic {
   //! final variable
   public final String https = "https";
 
+  //! static final variable (常數)
+  // naming convnetion: snake case + capital letter
+  public static final int HOUR_PER_DAY = 24;
+
+  //! Object's method can access static variable & method
+  //! static method CANNOT access objects 
   private int x;
   private int y;
 
@@ -32,11 +38,14 @@ public class DemoStatic {
 
     //!call instance method
     DemoStatic ds2 = new DemoStatic(10,3);
-      System.out.println(ds2.multipy()); //30
+    System.out.println(ds2.multipy()); //30
 
-      //! call final variable
-      DemoStatic ds3= new DemoStatic();
-      System.out.println(ds3.https);
+    //! call final variable
+    DemoStatic ds3= new DemoStatic();
+    System.out.println(ds3.https); //https
+    //final variable cannot be re-assigned
+
+    System.out.println(DemoStatic.HOUR_PER_DAY);
   }
 
   
