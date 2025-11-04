@@ -65,7 +65,7 @@ public class DemoString {
     // Java -> Type
     //! chain method
     System.out.println(s14.toUpperCase().charAt(1)); //E
-    System.out.println(s14.substring(4));
+    System.out.println(s14.substring(4).length()); //10
 
     //8. replace()
     String s17 = "python";
