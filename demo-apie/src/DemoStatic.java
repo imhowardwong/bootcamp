@@ -50,6 +50,8 @@ public class DemoStatic {
 
   
   public static int sum(int x, int y){
+    // return x+y + this.x; //! static method doesn't make sense to call "this"
+    //! because static method belongs Class, but not object
     return x+y;
   }
 
