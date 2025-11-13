@@ -19,6 +19,28 @@ public class Square extends Shape {
           .multiply(BigDecimal.valueOf(this.length))
           .setScale(2, RoundingMode.HALF_UP).doubleValue();
   }
+
+  @Override
+  public String toString(){
+    return "Square(" //
+    + "Length =" + this.length//
+    //+"Color = " + super.getColor()//
+    +"shape=" + super.toString()
+    +")";
+  }
+  @Override
+  public boolean equals(Object o){
+    if (this == o){
+      return true;
+    }
+    if (!(o instanceof Square)){
+      return false;
+    }
+    Square sq1 = (Square) o;
+    return this.length == (sq1.getLength())
+    // && this.color.equals(super.getColor());
+    && super.equals(sq1); //! compare all attribute
+  }
   public static void main(String[] args) {
     //! why do we need parent class
     //1. share common attribute (readability)

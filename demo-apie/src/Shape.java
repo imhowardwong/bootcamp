@@ -17,6 +17,23 @@ public abstract class Shape {
   public void setColor(String color){
     this.color = color;
   }
+  @Override
+  public String toString(){
+    return "Shape("
+    + "color=" + this.color
+    + ")";
+  }
+    @Override
+  public boolean equals(Object o){
+    if (this == o){
+      return true;
+    }
+    if (!(o instanceof Shape)){
+      return false;
+    }
+    Shape shape = (Shape) o;
+    return this.color.equals(shape.getColor());
+  }
   //!Abstract method: dont need to present the logic at this moment
   public abstract double getArea(); // because abstract can end of ;
 }
