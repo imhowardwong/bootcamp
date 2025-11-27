@@ -56,5 +56,10 @@ public class DemoHashMap {
     for (Map.Entry<Integer, String> student : classMate.entrySet()){
       System.out.println("student no="+student.getKey()+", student name=" + student.getValue());
     }
+    System.out.println(classMate.containsKey(2)); // true
+    System.out.println(classMate.containsKey(1)); //false
+    //containsValue = for loop
+    System.out.println(classMate.containsValue("Mary")); //true
+    System.out.println(classMate.containsValue("mary")); //false
   }
 }
