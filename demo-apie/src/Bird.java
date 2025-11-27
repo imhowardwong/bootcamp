@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public class Bird {
-  private int id;
+  // private int id;
   private String name;
   private int age;
 

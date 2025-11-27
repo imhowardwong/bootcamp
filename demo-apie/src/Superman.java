@@ -1,3 +1,4 @@
+//! Extends can be used once per class, but interface can mroe than one
 public class Superman extends Human implements Flyable, Eatbale{
 
   // When you explicitly write down constructor, implies that you dont need empty constructor
@@ -23,6 +24,15 @@ public class Superman extends Human implements Flyable, Eatbale{
 
     for (Eatbale e : things){
       e.eat();
+    }
+    
+    Flyable [] things3 = new Flyable[2];
+    things3[0] = new Superman(10, 90);
+    things3[1] = new Superman(9, 23);
+
+    for (Flyable thing : things3){
+      thing.fly();
+      thing.run();
     }
   }
 }

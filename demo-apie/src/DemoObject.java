@@ -8,7 +8,7 @@ public class DemoObject {
     //"hello" -> String object
     Object o1 = "hello";
     Object o2 = new Warrior(); 
-    Shape sh1 = new Circle();
+    Object sh1 = new Circle();
     
     Object [] things = new Object[3];
     things[0] = new Warrior();
@@ -20,6 +20,6 @@ public class DemoObject {
     // System.out.println(things[2].getArea());//!runtime ok, but you cant pass through the compile time
 
     //Compile Time (The time you writing the code)
-    
+
   }
 }

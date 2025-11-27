@@ -34,6 +34,15 @@ public abstract class Shape {
     Shape shape = (Shape) o;
     return this.color.equals(shape.getColor());
   }
+//! Parent Class can be return type
+  public static Shape getShape(int value){
+    if (value==1){
+      return new Square(1.0, "WHITE");
+    } else if (value==2){
+      return new Circle(2.0, "RED");
+    }
+    return null;
+  }
   //!Abstract method: dont need to present the logic at this moment
   public abstract double getArea(); // because abstract can end of ;
 }

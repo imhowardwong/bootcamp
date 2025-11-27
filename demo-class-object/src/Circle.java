@@ -6,7 +6,7 @@ public class Circle {
 
   public Circle(){
   }
-  public Circle(double radius){
+  public Circle(double radius, String string){
     this.radius= radius;
   }
   public double getRadius(){
@@ -50,6 +50,10 @@ public class Circle {
       }
       System.out.println(total.doubleValue()); //68.42
     }
+	public char[] getArea2() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'getArea2'");
+	}
 
   }
 
