@@ -47,7 +47,7 @@ public class DemoArrayList {
 
     // remove -> for loop -> cat.equals()
     cats.remove(new Cat("Leo"));
-    System.out.println(cats);
+    // System.out.println(cats);
 
     // ! remove() -> remove first matched object
     // you can try to put two Leo into Array and remove them
