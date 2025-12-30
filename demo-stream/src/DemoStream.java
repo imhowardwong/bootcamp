@@ -2,6 +2,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class DemoStream {
   public static void main(String[] args) {
@@ -68,9 +69,51 @@ public class DemoStream {
       .collect(Collectors.toSet());
     System.out.println(uniqueStaffNames2); //[Sue, Jenny, Tommy, Mary]
 
-    long names4 = persons.stream() //
-      .filter(p->p.getAge()>25) //
+    // Summary : Intermediate operation, terminal 
+    List<String> names4 = List.of("Sue", "Jenny", "Benny");
+
+    List<Character> chs = names4.stream() //
+      .filter(e->e.endsWith("y"))
+      .map(e->e.charAt(0))
+      .collect(Collectors.toList());
+    System.out.println(chs); // (J,B)
+
+    List<String> names5 = List.of("Sue", "Jenny", "Benny");
+
+    long numberOfName = names5.stream() //
+      .distinct() //
       .count();
-      System.out.println(names4); //2
-  }
+      System.out.println(numberOfName); //3
+
+      
+      //! map count
+      long numberOfName2 = names5.stream() //
+      .map(e->e.length()) //! map()wont affect the result of count(), map() will skip if you are using count() as terminal
+      .count();
+      System.out.println(numberOfName2); //3
+
+      Person p10 = Person.builder().age(12).name("John").build();
+      Person p12 = Person.builder().age(25).name("Peter").build();
+      Person p13 = Person.builder().age(40).name("Sam").build();
+      List<Person> staffs = List.of(p10,p12,p13);
+      List<String> staffsNames2 = staffs.stream()//
+        .filter(e -> {
+          System.out.println("filter name="+e.getName());
+          return e.getAge()>=20; //
+        }) //Stream<Person>
+        .map(e -> {
+          System.out.println("map name="+e.getName());
+          return e.getName().toUpperCase();
+        }) //Stream<String>
+        .collect(Collectors.toList());
+        System.out.println(staffsNames2);
+
+
+        //Stream.class
+        Stream<String> emails = Stream.of("leo@gmail.com", "jacky@gmail.com", "jenny@gmail.com");
+        long numberOfVaildEmail = emails
+        .filter(e->e.contains("@"))
+        .count();
+        System.out.println(numberOfVaildEmail); //3
+      }
 }
