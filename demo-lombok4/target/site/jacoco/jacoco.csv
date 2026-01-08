@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+demo-lombok,com.bootcamp.demo,Cat,83,47,7,5,28,18,7,8,3,6
+demo-lombok,com.bootcamp.demo,Dog,22,0,0,0,6,0,1,0,1,0
+demo-lombok,com.bootcamp.demo,Gun,0,26,0,2,0,9,0,4,0,3
+demo-lombok,com.bootcamp.demo,App,4,0,0,0,2,0,2,0,2,0
+demo-lombok,com.bootcamp.demo,DemoHamcrest,8,0,0,0,3,0,3,0,3,0
